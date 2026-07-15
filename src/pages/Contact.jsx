@@ -30,12 +30,12 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-10 lg:grid-cols-2">
+         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-panel rounded-[28px] p-10"
+           className="glass-panel mx-auto w-full max-w-xl rounded-[28px] p-8 lg:p-10"
           >
             <h2 className="mb-10 text-3xl font-bold">Get In Touch</h2>
 
@@ -90,7 +90,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-panel rounded-[28px] p-10"
+           className="glass-panel mx-auto w-full max-w-xl rounded-[28px] p-8 lg:p-10"
           >
             <h2 className="mb-8 text-3xl font-bold">Send a Message</h2>
 
