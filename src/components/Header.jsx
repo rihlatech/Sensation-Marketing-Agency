@@ -1,9 +1,12 @@
-// src/components/Header.jsx
-
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
+import {
+  HiOutlineMenuAlt3,
+  HiX,
+  HiSun,
+  HiMoon,
+} from "react-icons/hi";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -16,6 +19,16 @@ const navLinks = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const [darkMode, setDarkMode] = useState(() => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    return savedTheme === "dark";
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,16 +44,26 @@ const Header = () => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
+  useEffect(() => {
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+}, [darkMode]);
+
   return (
     <motion.header
       initial={{ y: -70, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${
-        isScrolled
-          ? "border-b border-white/10 bg-slate-950/70 shadow-[0_20px_60px_rgba(2,6,23,0.45)] backdrop-blur-2xl"
-          : "bg-transparent"
-      }`}
+     className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${
+  isScrolled
+    ? "border-b border-white/10 bg-[#07181A]/85 shadow-[0_8px_25px_rgba(2,6,23,0.25)] backdrop-blur-2xl"
+    : "bg-[#07181A]/70 backdrop-blur-xl"
+}`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -81,15 +104,21 @@ const Header = () => {
               </NavLink>
             ))}
           </nav>
+<div className="hidden items-center gap-4 lg:flex">
+  <button
+    onClick={() => setDarkMode(!darkMode)}
+    className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 shadow-md transition-all hover:scale-105 dark:border-slate-700 dark:bg-slate-900 dark:text-yellow-400"
+  >
+    {darkMode ? <HiSun size={20} /> : <HiMoon size={20} />}
+  </button>
 
-          <div className="hidden lg:block">
-            <Link
-              to="/contact"
-              className="premium-button rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 px-6 py-3 text-sm font-semibold text-white transition duration-300"
-            >
-              Book Consultation
-            </Link>
-          </div>
+  <Link
+    to="/contact"
+    className="rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+  >
+    Book Consultation
+  </Link>
+</div>
 
           <button
             onClick={() => setIsOpen(true)}

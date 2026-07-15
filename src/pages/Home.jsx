@@ -83,7 +83,8 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/95 via-[#090e27]/85 to-transparent" />
+      
+       <div className="absolute inset-0 bg-gradient-to-r from-[#07181A]/95 via-[#0B2326]/80 to-[#07181A]/35" />
 
           <div className="relative mx-auto flex max-w-7xl items-center px-6 py-16 lg:min-h-screen lg:px-10">
           <div className="max-w-2xl">
@@ -95,7 +96,8 @@ const Home = () => {
             >
               Grow Your
               <br />
-              <span className="bg-gradient-to-r from-violet-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-500 bg-clip-text text-transparent">
+                
                 Business Beyond
               </span>
               <br />
@@ -106,7 +108,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-8 max-w-xl text-lg leading-8 text-gray-300"
+              className="mt-8 max-w-xl text-lg leading-8 text-slate-200"
             >
               Helping businesses grow through creative marketing, powerful branding,
               professional video production and high-converting digital campaigns.
@@ -120,14 +122,14 @@ const Home = () => {
             >
               <Link
                 to="/contact"
-                className="premium-button rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 px-8 py-4 font-semibold text-white transition-all duration-300"
+                className="rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 px-8 py-4 font-semibold text-white shadow-lg shadow-teal-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/40"
               >
                 Book Consultation
               </Link>
 
               <Link
                 to="/services"
-                className="premium-button-secondary rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white/90 backdrop-blur-md transition-all duration-300 hover:bg-white/20"
+               className="rounded-full border border-teal-400/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-teal-400 hover:bg-teal-500/10"
               >
                 Explore Services
               </Link>
@@ -136,104 +138,171 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 text-center"
-          >
-            <h2 className="text-4xl font-bold md:text-5xl">What We Offer</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-              Helping businesses grow through creative solutions.
-            </p>
-          </motion.div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#ECFEFF] via-white to-[#F8FAFC] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-6 py-24 lg:px-10">
+       <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-indigo-200/20 blur-3xl dark:bg-indigo-500/10"></div>
+        <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-slate-300/20 blur-3xl dark:bg-slate-500/10"></div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.18 }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
-                whileHover={{ y: -8, scale: 1.01 }}
-                className="glass-panel rounded-[28px] p-8"
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500/20 to-cyan-400/20 text-4xl text-violet-300">
-                  {service.icon}
-                </div>
+  <div className="relative mx-auto max-w-7xl">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+      className="mb-14 text-center"
+    >
+      <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white">
+        What We Offer
+      </h2>
 
-                <div className="my-6 h-[3px] w-20 rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" />
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+        Helping businesses grow through creative solutions.
+      </p>
+    </motion.div>
 
-                <h3 className="text-2xl font-semibold">{service.title}</h3>
-
-                <p className="mt-4 leading-7 text-gray-400">{service.description}</p>
-
-                <Link to="/services" className="mt-8 inline-flex items-center text-violet-300 transition hover:text-white">
-                  Learn More <span className="ml-2">→</span>
-                </Link>
-              </motion.div>
-            ))}
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {services.map((service, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.18 }}
+          transition={{ delay: index * 0.08, duration: 0.5 }}
+          whileHover={{ y: -10, scale: 1.02 }}
+          className="group rounded-[30px] border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 p-8 backdrop-blur-xl shadow-lg transition-all duration-300 hover:-translate-y-3 hover:border-teal-400 hover:shadow-2xl"
+        >
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 via-cyan-500 to-sky-500 text-3xl text-white shadow-lg shadow-teal-500/30 transition duration-300 group-hover:scale-110">
+            {service.icon}
           </div>
-        </div>
-      </section>
 
-      <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-            className="mb-14 text-center"
-          >
-            <h2 className="text-4xl font-bold md:text-5xl">Why Choose Us</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-              We don't just market businesses. We help them grow.
-            </p>
-          </motion.div>
+          <div className="my-6 h-1 w-20 rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500"></div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
-                whileHover={{ y: -8, scale: 1.01 }}
-                className="glass-panel rounded-[28px] p-8 text-center"
-              >
-                <div className="flex justify-center text-5xl text-violet-300">{item.icon}</div>
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+            {service.title}
+          </h3>
 
-                <h3 className="mt-8 text-2xl font-semibold">{item.title}</h3>
-
-                <p className="mt-5 leading-7 text-gray-400">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-5xl rounded-[40px] border border-white/10 bg-gradient-to-r from-violet-700/20 via-indigo-700/15 to-cyan-700/20 p-14 text-center shadow-[0_20px_60px_rgba(2,6,23,0.45)] backdrop-blur-2xl">
-          <h2 className="text-4xl font-bold md:text-5xl">Ready To Grow Your Business?</h2>
-
-          <p className="mt-5 text-lg text-gray-300">
-            Let's create marketing that delivers real results.
+          <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            {service.description}
           </p>
 
           <Link
-            to="/contact"
-            className="premium-button mt-10 inline-block rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-8 py-4 font-semibold text-white transition"
+            to="/services"
+            className="mt-8 inline-flex items-center font-semibold text-teal-600 dark:text-teal-400 transition-all duration-300 hover:translate-x-2 hover:text-cyan-600 dark:hover:text-cyan-300"
           >
-            Contact Us
+            Learn More
+            <span className="ml-2">→</span>
           </Link>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="relative overflow-hidden bg-gradient-to-br from-[#ECFEFF] via-white to-[#F8FAFC] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-6 py-24 lg:px-10">
+  <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-teal-200/20 blur-3xl dark:bg-teal-500/10"></div>
+  <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-200/20 blur-3xl dark:bg-cyan-500/10"></div>
+
+  <div className="relative mx-auto max-w-7xl">
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+      className="mb-16 text-center"
+    >
+      <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white md:text-5xl">
+        Why Choose Us
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+        We combine creativity, strategy and innovation to help businesses
+        build stronger brands and achieve measurable growth.
+      </p>
+    </motion.div>
+
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {whyChooseUs.map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ delay: index * 0.08, duration: 0.5 }}
+          whileHover={{ y: -10, scale: 1.02 }}
+          className="group rounded-[30px] border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 p-8 text-center backdrop-blur-xl shadow-lg transition-all duration-300 hover:-translate-y-3 hover:border-teal-400 hover:shadow-2xl"
+        >
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 via-cyan-500 to-sky-500 text-3xl text-white shadow-lg shadow-teal-500/30 transition duration-300 group-hover:scale-110">
+            {item.icon}
+          </div>
+
+          <div className="mx-auto my-6 h-1 w-16 rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500"></div>
+
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+            {item.title}
+          </h3>
+
+          <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            {item.description}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+   <section className="relative overflow-hidden bg-gradient-to-br from-[#FAFAFA] via-white to-[#F8FAFC] dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-6 py-24">
+
+  {/* Background Glow */}
+  <div className="absolute top-0 left-0 h-80 w-80 rounded-full bg-teal-100/20 blur-3xl dark:bg-teal-500/10"></div>
+  <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-sky-100/20 blur-3xl dark:bg-cyan-500/10"></div>
+
+  <div className="relative mx-auto max-w-5xl rounded-[36px] bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 p-12 md:p-16 text-center shadow-2xl">
+
+    <motion.h2
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-4xl md:text-5xl font-extrabold text-white"
+    >
+      Ready to Grow Your Business?
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
+      className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/90"
+    >
+      Let's transform your ideas into impactful marketing campaigns that
+      attract customers, strengthen your brand and accelerate business growth.
+    </motion.p>
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.4 }}
+      className="mt-10 flex flex-col sm:flex-row justify-center gap-5"
+    >
+      <Link
+        to="/contact"
+        className="rounded-full bg-white px-8 py-4 font-semibold text-teal-700 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+      >
+        Book Consultation
+      </Link>
+
+      <Link
+        to="/services"
+        className="rounded-full border border-white/40 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:bg-white/20"
+      >
+        Explore Services
+      </Link>
+    </motion.div>
+
+  </div>
+
+</section>
     </div>
   );
 };
