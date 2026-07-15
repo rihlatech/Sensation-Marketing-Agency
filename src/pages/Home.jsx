@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <div className="text-white">
       <section
-        className="relative min-h-[92vh] overflow-hidden pt-16 lg:pt-0"
+         className="relative min-h-[90vh] overflow-hidden pt-20 lg:min-h-screen lg:pt-0"
         style={{
           backgroundImage: `url(${heroOffice})`,
           backgroundSize: "cover",
@@ -85,7 +85,7 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/95 via-[#090e27]/85 to-transparent" />
 
-        <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-start lg:items-center px-6 lg:px-10">
+        <div className="relative mx-auto flex min-h-screen max-w-7xl items-start lg:items-center px-6 lg:px-10">
           <div className="max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
