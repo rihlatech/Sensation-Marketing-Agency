@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import Training from "./pages/Training";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ContactSuccess from "./pages/ContactSuccess";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ContactSuccess />} />
           </Routes>
         </main>
 

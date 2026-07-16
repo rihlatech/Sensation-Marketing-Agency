@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 
+
 const whatsapp = "254797983216";
 const email = "sensationmagency@gmail.com";
 const phone = "0797 983216";
@@ -150,13 +151,39 @@ const Contact = () => {
 
 
           <form
-            action="https://formsubmit.co/YOUR_EMAIL_HERE"
+            action="https://api.web3forms.com/submit"
             method="POST"
             className="space-y-6"
           >
+            <input
+  type="hidden"
+  name="access_key"
+  value="e6f6839b-b2d5-4797-b613-4dca380076fc"
+/>
 
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
+<input
+  type="checkbox"
+  name="botcheck"
+  className="hidden"
+/>
+
+<input
+  type="hidden"
+  name="subject"
+  value="New Website Inquiry"
+/>
+
+<input
+  type="hidden"
+  name="from_name"
+  value="Sensation Marketing Website"
+/>
+
+<input
+  type="hidden"
+  name="redirect"
+  value="https://sensationmarketingagency.vercel.app/thank-you"
+/>
 
 
             {[
