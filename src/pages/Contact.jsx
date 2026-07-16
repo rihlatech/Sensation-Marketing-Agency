@@ -182,7 +182,7 @@ const Contact = () => {
 <input
   type="hidden"
   name="redirect"
-  value="https://sensationmarketingagency.vercel.app/thank-you"
+  value="https://sensationmarketingagency.vercel.app/ContactSuccess"
 />
 
 
