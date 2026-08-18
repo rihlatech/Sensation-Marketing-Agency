@@ -1,127 +1,313 @@
 // src/pages/Training.jsx
 
 import { motion } from "motion/react";
-import { FaGraduationCap, FaCheckCircle } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaCheckCircle,
+  FaCalendarAlt,
+  FaLaptop,
+  FaUsers,
+  FaChartLine,
+} from "react-icons/fa";
 
 const whatsapp = "254797983216";
 
-const packages = [
+const topics = [
+  "Building a content and social media strategy from scratch",
+  "Running and optimizing Meta Ads campaigns",
+  "Growing engagement and community on Instagram, TikTok and Facebook",
+  "Turning followers into paying customers with a real sales process",
+  "Analytics: reading the numbers that actually matter",
+];
+
+const format = [
   {
-    package: "Package 1",
-    title: "Basic Meta Ads Training",
-    price: "KES 10,000",
-    features: [
-      "Meta Ads Training (Facebook & Instagram)",
-      "Digital Marketing Training",
-      "Lead Generation Tools",
-      "Training Every Tuesday & Friday",
-    ],
+    icon: <FaCalendarAlt />,
+    title: "Once Every Month",
+    description:
+      "A practical masterclass held once every month for entrepreneurs, marketers and creators.",
   },
   {
-    package: "Package 2",
-    title: "Professional Meta Ads Training",
-    price: "KES 20,000",
-    features: [
-      "Meta Ads Training (Facebook & Instagram)",
-      "Advanced Digital Marketing",
-      "Lead Generation",
-      "Content Creation for One Month",
-      "Practical Campaign Management",
-    ],
+    icon: <FaLaptop />,
+    title: "Physical & Online",
+    description:
+      "Join us physically or participate remotely from wherever you are.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Small-Group & Hands-On",
+    description:
+      "Interactive sessions designed to give every participant practical experience.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Real Campaigns",
+    description:
+      "Learn using real campaigns, real budgets and strategies focused on business results.",
   },
 ];
 
 const Training = () => {
- return (
-  <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white">
+  return (
+    <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
 
-    {/* Background Glow */}
-    <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-indigo-200/20 blur-3xl dark:bg-indigo-500/10"></div>
-    <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-slate-300/20 blur-3xl dark:bg-slate-500/10"></div>
+      {/* Background Glows */}
+      <div className="pointer-events-none absolute left-0 top-0 h-72 w-72 rounded-full bg-[#9b0a28]/10 blur-3xl dark:bg-[#9b0a28]/20" />
 
-    <div className="relative mx-auto max-w-7xl">
+      <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-gray-300/30 blur-3xl dark:bg-[#9b0a28]/10" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="mb-20 text-center"
-      >
-        <h1 className="text-5xl font-black lg:text-6xl text-slate-900 dark:text-white">
-          Digital Marketing{" "}
-          <span className="bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 bg-clip-text text-transparent">
-            Training
-          </span>
-        </h1>
+      <div className="relative mx-auto max-w-7xl">
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Learn Meta Advertising and Digital Marketing from industry professionals through practical, hands-on sessions designed to help you grow your business or career.
-        </p>
-      </motion.div>
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20 text-center"
+        >
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#9b0a28] text-2xl text-white shadow-lg shadow-[#9b0a28]/30">
+            <FaGraduationCap />
+          </div>
 
-      <div className="grid gap-10 lg:grid-cols-2">
-        {packages.map((item, index) => (
+          <h1 className="text-5xl font-black lg:text-6xl">
+            Sensation{" "}
+            <span className="bg-gradient-to-r from-[#9b0a28] via-[#b7193d] to-[#777777] bg-clip-text text-transparent">
+              Masterclasses
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-gray-300">
+            Practical, revenue-focused training in digital marketing, social
+            media growth and Meta Ads — built from real campaigns, not theory.
+          </p>
+        </motion.div>
+
+
+        {/* Introduction */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-4xl rounded-[30px] border border-slate-200 bg-white p-8 shadow-lg dark:border-white/10 dark:bg-white/5 dark:backdrop-blur-xl md:p-12"
+        >
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Learn Marketing That{" "}
+            <span className="text-[#9b0a28]">
+              Actually Moves Business
+            </span>
+          </h2>
+
+          <p className="mt-6 leading-8 text-slate-600 dark:text-gray-300">
+            Once every month, Sensation Marketing Agency brings together
+            entrepreneurs, startup founders, marketers, students and creators
+            for a hands-on masterclass focused on practical digital marketing
+            skills.
+          </p>
+
+          <p className="mt-5 leading-8 text-slate-600 dark:text-gray-300">
+            We don't teach marketing as theory. We focus on what happens in
+            the real world — building campaigns, understanding audiences,
+            managing budgets, reading performance data and turning attention
+            into customers.
+          </p>
+        </motion.div>
+
+
+        {/* What You'll Learn */}
+        <section className="mt-24">
+
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.15 }}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="group flex flex-col rounded-[30px] border border-slate-200 bg-white p-8 shadow-lg transition-all duration-300 hover:border-teal-300 hover:shadow-2xl dark:border-white/10 dark:bg-white/5 dark:backdrop-blur-xl"
+            className="mb-14 text-center"
           >
-            <div className="flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 text-2xl text-white shadow-lg shadow-teal-500/30">
-                <FaGraduationCap />
-              </div>
+            <h2 className="text-4xl font-black md:text-5xl">
+              What You'll{" "}
+              <span className="text-[#9b0a28]">
+                Learn
+              </span>
+            </h2>
 
-              <div>
-                <p className="font-semibold text-teal-600 dark:text-teal-400">
-                  {item.package}
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-gray-400">
+              Everything you need to build a stronger online presence and turn
+              digital attention into real business results.
+            </p>
+          </motion.div>
+
+
+          <div className="grid gap-6 md:grid-cols-2">
+
+            {topics.map((topic, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                whileHover={{ y: -5 }}
+                className="group flex items-start gap-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-md transition-all duration-300 hover:border-[#9b0a28]/50 hover:shadow-xl dark:border-white/10 dark:bg-white/5"
+              >
+
+                <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#9b0a28] text-white shadow-lg shadow-[#9b0a28]/20">
+                  <FaCheckCircle />
+                </div>
+
+                <p className="text-lg leading-7 text-slate-700 dark:text-gray-300">
+                  {topic}
                 </p>
 
-                <h2 className="mt-1 text-3xl font-bold text-slate-900 dark:text-white">
-                  {item.title}
-                </h2>
-              </div>
-            </div>
+              </motion.div>
+            ))}
 
-            <h3 className="mt-8 bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 bg-clip-text text-4xl font-black text-transparent">
-              {item.price}
-            </h3>
+          </div>
 
-            <div className="mt-10 space-y-5">              
-                {item.features.map((feature, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 text-slate-600 dark:text-slate-300"
-                >
-                  <FaCheckCircle className="text-teal-500" />
-                  <span>{feature}</span>
+        </section>
+
+
+        {/* Format */}
+        <section className="mt-24">
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14 text-center"
+          >
+            <h2 className="text-4xl font-black md:text-5xl">
+              How The{" "}
+              <span className="text-[#9b0a28]">
+                Masterclass Works
+              </span>
+            </h2>
+          </motion.div>
+
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+            {format.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group rounded-[28px] border border-slate-200 bg-white p-8 text-center shadow-lg transition-all duration-300 hover:border-[#9b0a28]/50 hover:shadow-2xl dark:border-white/10 dark:bg-white/5 dark:backdrop-blur-xl"
+              >
+
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#9b0a28] to-[#b7193d] text-2xl text-white shadow-lg shadow-[#9b0a28]/30 transition duration-300 group-hover:scale-110">
+                  {item.icon}
                 </div>
+
+                <h3 className="mt-7 text-xl font-bold">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-600 dark:text-gray-400">
+                  {item.description}
+                </p>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </section>
+
+
+        {/* Who It's For */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-24"
+        >
+
+          <div className="rounded-[32px] bg-black p-10 text-center shadow-2xl dark:border dark:border-white/10 md:p-16">
+
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#b7193d]">
+              Who It's For
+            </p>
+
+            <h2 className="mt-5 text-4xl font-black text-white md:text-5xl">
+              Built For People Who Want{" "}
+              <span className="text-[#b7193d]">
+                Results
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300">
+              Whether you're building a startup, running an established
+              business, managing a brand, studying marketing or creating
+              content, the Sensation Masterclass gives you practical skills
+              you can apply immediately.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+
+              {[
+                "Business Owners",
+                "Startup Founders",
+                "Marketers",
+                "Students",
+                "Creators",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white backdrop-blur-sm"
+                >
+                  {item}
+                </span>
               ))}
+
             </div>
+
+          </div>
+
+        </motion.section>
+
+
+        {/* CTA */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-24"
+        >
+
+          <div className="rounded-[32px] bg-gradient-to-r from-[#9b0a28] via-[#b7193d] to-[#7b7b7b] p-10 text-center shadow-2xl md:p-16">
+
+            <h2 className="text-4xl font-black text-white md:text-5xl">
+              Ready to Learn What Actually Works?
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
+              Reserve your spot in the next Sensation Masterclass and learn
+              practical digital marketing skills built around real campaigns,
+              real budgets and real business goals.
+            </p>
 
             <a
               href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(
-                index === 0
-                  ? "Hello Sensation Marketing Agency,\nI would like to enroll in the Basic Meta Ads Training package."
-                  : "Hello Sensation Marketing Agency,\nI would like to enroll in the Professional Meta Ads Training package."
+                "Hello Sensation Marketing Agency,\n\nI would like to know more about the next Sensation Masterclass."
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-12 block rounded-full bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500 py-4 text-center font-semibold text-white shadow-lg shadow-teal-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/40"
+              className="mt-9 inline-block rounded-full bg-white px-9 py-4 font-bold text-[#9b0a28] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
-              Inquire Course
+              Reserve Your Spot
             </a>
-          </motion.div>
-        ))}
-      </div>
 
+          </div>
+
+        </motion.section>
+
+      </div>
     </div>
-  </div>
-);
+  );
 };
 
 export default Training;
