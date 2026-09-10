@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import heroOffice from "../assets/images/hero-office.jpg";
@@ -110,6 +110,117 @@ const whyChooseUs = [
 
 const Home = () => {
   return (
+   <>
+   <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Sensation Marketing",
+    url: "https://sensationmarketingagency.com/",
+    logo: "https://sensationmarketingagency.com/SMA-logo.png",
+    image: "https://sensationmarketingagency.com/SMA-logo.png",
+    description:
+      "Sensation Marketing is a Kenyan digital marketing agency helping businesses grow through strategic marketing, creative content, social media, paid advertising and web design.",
+    areaServed: {
+      "@type": "Country",
+      name: "Kenya",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Nairobi",
+      addressCountry: "KE",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+254797983216",
+      contactType: "customer service",
+      availableLanguage: ["English"],
+    },
+    sameAs: [],
+  })}
+</script>
+
+    <Helmet>
+  {/* Basic SEO */}
+  <title>Sensation Marketing | Digital Marketing Agency in Kenya</title>
+
+  <meta
+    name="description"
+    content="Sensation Marketing is a Kenyan digital marketing agency helping businesses grow through strategic marketing, creative content, social media, paid advertising and web design."
+  />
+
+  <meta
+    name="keywords"
+    content="digital marketing agency Kenya, marketing agency Kenya, digital marketing services Kenya, social media marketing Kenya, Meta Ads Kenya, Google Ads Kenya, website design Kenya, real estate marketing Kenya"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://sensationmarketingagency.com/"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    property="og:description"
+    content="Strategic marketing, creative content, advertising, social media and web solutions designed to grow your business."
+  />
+
+  <meta
+    property="og:url"
+    content="https://sensationmarketingagency.com/"
+  />
+
+  <meta
+    property="og:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="Sensation Marketing logo"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Sensation Marketing"
+  />
+
+  {/* X / Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Strategic marketing, creative content, advertising, social media and web solutions designed to grow your business."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="Sensation Marketing logo"
+  />
+</Helmet>
+
     <div className="text-black dark:text-white">
 
       {/* ==================================================
@@ -506,7 +617,9 @@ const Home = () => {
       </section>
 
     </div>
+    </>
   );
+  
 };
 
 export default Home;

@@ -1,5 +1,6 @@
 // src/pages/Training.jsx
 
+import { Helmet } from "react-helmet-async";
 import { motion } from "motion/react";
 import {
   FaGraduationCap,
@@ -49,6 +50,89 @@ const format = [
 
 const Training = () => {
   return (
+    <>
+    <Helmet>
+  {/* Basic SEO */}
+  <title>Sensation Masterclasses | Digital Marketing Training in Kenya</title>
+
+  <meta
+    name="description"
+    content="Join Sensation Marketing's practical digital marketing training in Kenya. Learn social media marketing, Meta Ads, content strategy, analytics and how to turn online attention into business results."
+  />
+
+  <meta
+    name="keywords"
+    content="digital marketing training Kenya, digital marketing courses Kenya, digital marketing masterclass Kenya, Meta Ads training Kenya, social media marketing training Kenya, Facebook Ads training Kenya, Instagram marketing training Kenya, marketing training Nairobi"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://sensationmarketingagency.com/training"
+  />
+
+  {/* Open Graph / Facebook / WhatsApp */}
+  <meta
+    property="og:title"
+    content="Sensation Masterclasses | Digital Marketing Training in Kenya"
+  />
+
+  <meta
+    property="og:description"
+    content="Practical digital marketing training covering social media growth, Meta Ads, content strategy, analytics and real business campaigns."
+  />
+
+  <meta
+    property="og:url"
+    content="https://sensationmarketingagency.com/training"
+  />
+
+  <meta
+    property="og:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="Sensation Marketing logo"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Sensation Marketing"
+  />
+
+  <meta property="og:locale" content="en_KE" />
+
+  {/* X / Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Sensation Masterclasses | Digital Marketing Training in Kenya"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Learn practical digital marketing, social media growth, Meta Ads and analytics through real campaigns and business-focused training."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="Sensation Marketing logo"
+  />
+</Helmet>
     <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
 
       {/* Background Glows */}
@@ -307,6 +391,7 @@ const Training = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 // src/pages/Services.jsx
-
+import { Helmet } from "react-helmet-async";
 import {
   FaVideo,
   FaBullhorn,
@@ -85,6 +85,90 @@ const services = [
 
 const Services = () => {
   return (
+    <>
+    <Helmet>
+  {/* Basic SEO */}
+  <title>Sensation Marketing | Digital Marketing Services in Kenya</title>
+
+  <meta
+    name="description"
+    content="Explore Sensation Marketing's digital marketing services in Kenya, including advertising, marketing strategy, Meta and Google Ads, social media marketing, influencer marketing, real estate marketing, photography and website design."
+  />
+
+  <meta
+    name="keywords"
+    content="digital marketing services Kenya, marketing services Kenya, advertising agency Kenya, Meta Ads Kenya, Google Ads Kenya, social media marketing Kenya, influencer marketing Kenya, real estate marketing Kenya, website design Kenya, product photography Kenya"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://sensationmarketingagency.com/services"
+  />
+
+  {/* Open Graph / Facebook / WhatsApp */}
+  <meta
+    property="og:title"
+    content="Sensation Marketing | Digital Marketing Services in Kenya"
+  />
+
+  <meta
+    property="og:description"
+    content="Explore our digital marketing, advertising, social media, web design, real estate marketing and creative services designed to help businesses grow."
+  />
+
+  <meta
+    property="og:url"
+    content="https://sensationmarketingagency.com/services"
+  />
+
+  <meta
+    property="og:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="Sensation Marketing logo"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Sensation Marketing"
+  />
+
+  <meta property="og:locale" content="en_KE" />
+
+  {/* X / Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Sensation Marketing | Digital Marketing Services in Kenya"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Digital marketing, advertising, social media, web design and creative services for businesses in Kenya."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="Sensation Marketing logo"
+  />
+</Helmet>
+{/* ============================================================ */}
     <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
 
       {/* =====================================================
@@ -417,6 +501,7 @@ const Services = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

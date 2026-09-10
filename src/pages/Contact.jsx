@@ -1,5 +1,6 @@
 // src/pages/Contact.jsx
 
+import { Helmet } from "react-helmet-async";
 import { motion } from "motion/react";
 import {
   FaEnvelope,
@@ -15,6 +16,90 @@ const phoneLink = "+254797983216";
 
 const Contact = () => {
   return (
+    <>
+    <Helmet>
+  {/* Basic SEO */}
+  <title>Contact Sensation Marketing | Digital Marketing Agency in Kenya</title>
+
+  <meta
+    name="description"
+    content="Contact Sensation Marketing in Kenya for digital marketing, advertising, social media management, website design, real estate marketing and creative services."
+  />
+
+  <meta
+    name="keywords"
+    content="contact digital marketing agency Kenya, marketing agency Nairobi, digital marketing agency Nairobi, advertising agency Kenya, social media marketing Kenya, website design Kenya"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://sensationmarketingagency.com/contact"
+  />
+
+  {/* Open Graph / Facebook / WhatsApp */}
+  <meta
+    property="og:title"
+    content="Contact Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    property="og:description"
+    content="Get in touch with Sensation Marketing for strategic marketing, advertising, social media, web design and creative solutions."
+  />
+
+  <meta
+    property="og:url"
+    content="https://sensationmarketingagency.com/contact"
+  />
+
+  <meta
+    property="og:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="Sensation Marketing logo"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Sensation Marketing"
+  />
+
+  <meta property="og:locale" content="en_KE" />
+
+  {/* X / Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Contact Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Contact Sensation Marketing for digital marketing, advertising, social media, web design and creative services in Kenya."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="Sensation Marketing logo"
+  />
+</Helmet>
+
     <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
 
       {/* Background Glow */}
@@ -192,7 +277,7 @@ const Contact = () => {
               <input
                 type="hidden"
                 name="redirect"
-                value="https://sensationmarketingagency.vercel.app/thank-you"
+                value="https://sensationmarketingagency.com/thank-you"
               />
 
 
@@ -241,6 +326,7 @@ const Contact = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 
+import { Helmet } from "react-helmet-async";
 import { motion } from "motion/react";
 import {
   FaBullseye,
@@ -37,6 +38,92 @@ const reasons = [
 
 const About = () => {
   return (
+    <>
+    <Helmet>
+  {/* Basic SEO */}
+  <title>
+    About Sensation Marketing | Digital Marketing Agency in Kenya
+  </title>
+
+  <meta
+    name="description"
+    content="Learn about Sensation Marketing, a Nairobi-based digital marketing agency helping businesses across Kenya grow through strategic storytelling, creative marketing, advertising and digital solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="about Sensation Marketing, digital marketing agency Kenya, digital marketing agency Nairobi, marketing agency Nairobi, marketing agency Kenya, advertising agency Kenya, social media marketing Kenya, creative marketing agency Kenya"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://sensationmarketingagency.com/about"
+  />
+
+  {/* Open Graph / Facebook / WhatsApp */}
+  <meta
+    property="og:title"
+    content="About Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    property="og:description"
+    content="Discover Sensation Marketing, a Nairobi-based digital marketing agency focused on storytelling, creative marketing, advertising and measurable business growth."
+  />
+
+  <meta
+    property="og:url"
+    content="https://sensationmarketingagency.com/about"
+  />
+
+  <meta
+    property="og:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="Sensation Marketing logo"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Sensation Marketing"
+  />
+
+  <meta property="og:locale" content="en_KE" />
+
+  {/* X / Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="About Sensation Marketing | Digital Marketing Agency in Kenya"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Learn about Sensation Marketing and how we combine storytelling, creativity and strategy to help businesses grow in Kenya."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://sensationmarketingagency.com/SMA-logo.png"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="Sensation Marketing logo"
+  />
+</Helmet>
+
     <div className="min-h-screen bg-white px-6 pb-24 pt-36 text-slate-900 transition-colors duration-300 dark:bg-black dark:text-white">
 
       {/* Background Glow */}
@@ -251,6 +338,7 @@ const About = () => {
       </div>
 
     </div>
+    </>
   );
 };
 
