@@ -2,6 +2,7 @@
 
 import { Helmet } from "react-helmet-async";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import {
   FaGraduationCap,
   FaCheckCircle,
@@ -214,15 +215,13 @@ const Training = () => {
                 </span>
               </div>
 
-              <a
-                href="https://clientacquisitionsystem.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] md:w-auto"
-              >
-                Get Early Access
-                <span className="ml-2">→</span>
-              </a>
+            <Link
+  to="/client-acquisition-system"
+  className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] md:w-auto"
+>
+  Get Early Access
+  <span className="ml-2">→</span>
+</Link>
             </div>
 
           </div>

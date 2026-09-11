@@ -13,16 +13,17 @@ import Training from "./pages/Training";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ContactSuccess from "./pages/ContactSuccess";
+import ClientAcquisitionSystem from "./pages/ClientAcquisitionSystem";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
 
-      <div className="relative min-h-screen overflow-x-hidden bg-[#050816] text-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(168,85,247,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.14),transparent_35%)]" />
-        <div className="pointer-events-none absolute left-[-10rem] top-24 h-72 w-72 rounded-full bg-violet-500/15 blur-[140px]" />
-        <div className="pointer-events-none absolute bottom-20 right-[-8rem] h-80 w-80 rounded-full bg-cyan-400/15 blur-[140px]" />
+      <div className="relative min-h-screen overflow-x-hidden bg-black text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(155,10,40,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(120,120,120,0.12),transparent_35%)]" />
+        <div className="pointer-events-none absolute left-[-10rem] top-24 h-72 w-72 rounded-full bg-[#9b0a28]/15 blur-[140px]" />
+        <div className="pointer-events-none absolute bottom-20 right-[-8rem] h-80 w-80 rounded-full bg-gray-500/10 blur-[140px]" />
 
         <Header />
 
@@ -34,13 +35,17 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/thank-you" element={<ContactSuccess />} />
+            <Route
+              path="/client-acquisition-system"
+              element={<ClientAcquisitionSystem />}
+            />
           </Routes>
         </main>
 
         <Footer />
 
         <a
-          href="https://wa.me/254797983216?text=Hello%20Sensation%20Marketing%20Agency,%20I%20would%20like%20to%20make%20an%20inquiry."
+          href="https://wa.me/254797983216?text=Hello%20Sensation%20Marketing%20Agency%2C%20I%20would%20like%20to%20make%20an%20inquiry"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"

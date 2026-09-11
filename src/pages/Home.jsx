@@ -367,16 +367,14 @@ const Home = () => {
             </p>
 
 
-            {/* CTA */}
-            <a
-              href="https://clientacquisitionsystem.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] sm:w-auto"
-            >
-              Get Early Access
-              <span className="ml-2">→</span>
-            </a>
+           {/* CTA */}
+<Link
+  to="/client-acquisition-system"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] sm:w-auto"
+>
+  Get Early Access
+  <span className="ml-2">→</span>
+</Link>
 
           </div>
 
