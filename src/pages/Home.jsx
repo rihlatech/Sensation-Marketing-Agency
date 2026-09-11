@@ -10,13 +10,12 @@ import {
   FaGoogle,
   FaShareAlt,
   FaHome,
-  // FaCamera,
   FaGlobe,
-  // FaGraduationCap,
   FaAward,
   FaLightbulb,
   FaHandshake,
   FaRocket,
+  FaTag,
 } from "react-icons/fa";
 
 
@@ -228,99 +227,167 @@ const Home = () => {
       ================================================== */}
 
       <section
-        className="relative min-h-[90vh] overflow-hidden pt-24 lg:min-h-screen lg:pt-0"
-        style={{
-          backgroundImage: `url(${heroOffice})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-
-        {/* Hero Overlay */}
-
-        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
-
-        {/* Burgundy Glow */}
-
-        <div className="absolute left-[-8rem] top-20 h-72 w-72 rounded-full bg-[#9b0a28]/20 blur-[120px]" />
-
-        <div className="absolute bottom-10 right-[-5rem] h-80 w-80 rounded-full bg-[#9b0a28]/20 blur-[140px]" />
-
-
-        <div className="relative mx-auto flex max-w-7xl items-center px-6 py-16 lg:min-h-screen lg:px-10">
-
-          <div className="max-w-2xl">
-
-            <motion.h1
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="text-5xl font-black leading-[1.05] text-white md:text-6xl lg:text-7xl"
+  className="relative min-h-[90vh] overflow-hidden pt-24 lg:min-h-screen lg:pt-0"
+  style={{
+    backgroundImage: `url(${heroOffice})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
 >
-  {/* 
-    HERO TEXT
-    --------------------------------
-    The CEO will provide the final wording.
-  */}
+  {/* Hero Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
 
-  Grow Your
-  <br />
+  {/* Burgundy Glow */}
+  <div className="absolute left-[-8rem] top-20 h-72 w-72 rounded-full bg-[#9b0a28]/20 blur-[120px]" />
+  <div className="absolute bottom-10 right-[-5rem] h-80 w-80 rounded-full bg-[#9b0a28]/20 blur-[140px]" />
 
-  <span className="bg-gradient-to-r from-[#9b0a28] via-[#b7193d] to-[#c6c6c6] bg-clip-text text-transparent">
-    Business Beyond
-  </span>
+  <div className="relative mx-auto flex min-h-[90vh] max-w-7xl items-center px-6 py-16 lg:min-h-screen lg:px-10">
 
-  <br />
+    {/* ==================================================
+        HERO CONTENT GRID
+    ================================================== */}
 
-  Expectations
-</motion.h1>
+    <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(320px,380px)] lg:gap-16">
+
+      {/* ==================================================
+          LEFT — MAIN HERO CONTENT
+      ================================================== */}
+
+      <div className="max-w-2xl">
+
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-black leading-[1.05] text-white md:text-6xl lg:text-7xl"
+        >
+          {/* 
+            HERO TEXT
+            --------------------------------
+            The CEO will provide the final wording.
+          */}
+
+          Grow Your
+          <br />
+
+          <span className="bg-gradient-to-r from-[#9b0a28] via-[#b7193d] to-[#c6c6c6] bg-clip-text text-transparent">
+            Business Beyond
+          </span>
+
+          <br />
+
+          Expectations
+        </motion.h1>
 
 
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-8 max-w-xl text-lg leading-8 text-gray-200"
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mt-8 max-w-xl text-lg leading-8 text-gray-200"
+        >
+          Helping businesses turn powerful storytelling into engagement,
+          leads and revenue through strategic marketing and creative
+          solutions.
+        </motion.p>
+
+
+        {/* Main CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 flex flex-wrap gap-5"
+        >
+          {/* Primary CTA */}
+          <Link
+            to="/contact"
+            className="rounded-full bg-[#9b0a28] px-8 py-4 font-semibold text-white shadow-lg shadow-[#9b0a28]/30 transition-all duration-300 hover:-translate-y-1 hover:bg-[#b30d30] hover:shadow-xl hover:shadow-[#9b0a28]/40"
+          >
+            Book Consultation
+          </Link>
+
+          {/* Secondary CTA */}
+          <Link
+            to="/services"
+            className="rounded-full border border-[#c6c6c6]/40 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-[#9b0a28] hover:bg-[#9b0a28]/20"
+          >
+            Explore Services
+          </Link>
+        </motion.div>
+
+      </div>
+
+
+      {/* ==================================================
+          RIGHT — CLIENT ACQUISITION SYSTEM
+      ================================================== */}
+
+      <div className="flex w-full justify-center lg:justify-end">
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="relative w-full max-w-sm overflow-hidden rounded-2xl border border-[#9b0a28]/40 bg-black/65 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7"
+        >
+
+          {/* Offer Badge */}
+          <div className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full border border-[#9b0a28]/50 bg-[#9b0a28]/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#e5a0af]">
+            <FaTag className="text-[10px]" />
+            Early Offer
+          </div>
+
+
+          {/* Card Content */}
+          <div className="pt-1">
+
+            <p className="max-w-[190px] text-xs font-semibold uppercase tracking-[0.18em] text-[#c6c6c6]">
+              Client Acquisition System
+            </p>
+
+
+            {/* Price */}
+            <div className="mt-6 flex flex-wrap items-baseline gap-3">
+              <span className="text-sm text-gray-500 line-through">
+                KES 5,000
+              </span>
+
+              <span className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                KES 500
+              </span>
+            </div>
+
+
+            {/* Description */}
+            <p className="mt-3 max-w-xs text-sm leading-6 text-gray-300">
+              Get early access to the Client Acquisition System training.
+            </p>
+
+
+            {/* CTA */}
+            <a
+              href="https://clientacquisitionsystem.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] sm:w-auto"
             >
-              Helping businesses turn powerful storytelling into engagement,
-              leads and revenue through strategic marketing and creative
-              solutions.
-            </motion.p>
-
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mt-10 flex flex-wrap gap-5"
-            >
-
-              {/* Primary CTA */}
-
-              <Link
-                to="/contact"
-                className="rounded-full bg-[#9b0a28] px-8 py-4 font-semibold text-white shadow-lg shadow-[#9b0a28]/30 transition-all duration-300 hover:-translate-y-1 hover:bg-[#b30d30] hover:shadow-xl hover:shadow-[#9b0a28]/40"
-              >
-                Book Consultation
-              </Link>
-
-
-              {/* Secondary CTA */}
-
-              <Link
-                to="/services"
-                className="rounded-full border border-[#c6c6c6]/40 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-[#9b0a28] hover:bg-[#9b0a28]/20"
-              >
-                Explore Services
-              </Link>
-
-            </motion.div>
+              Get Early Access
+              <span className="ml-2">→</span>
+            </a>
 
           </div>
 
-        </div>
+        </motion.div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
       {/* ==================================================
