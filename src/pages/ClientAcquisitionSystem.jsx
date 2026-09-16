@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { FaArrowRight, FaCheck, FaWhatsapp } from "react-icons/fa";
 
@@ -199,9 +199,9 @@ const ClientAcquisitionSystem = () => {
         Digital Marketing & Social Media Training
       </p>
 <h1 className="mt-7 font-['Playfair_Display'] text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
-  The Client
+  Become an
   <span className="mt-1 block text-[#b7193d]">
-    Acquisition System
+    Influencer Guide
   </span>
 </h1>
 
