@@ -170,62 +170,68 @@ const Training = () => {
         </motion.div>
 
                 {/* Client Acquisition System Offer */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative mx-auto mb-24 max-w-5xl overflow-hidden rounded-2xl border border-[#9b0a28]/40 bg-black/95 p-6 shadow-2xl shadow-[#9b0a28]/10 md:p-8"
-        >
-          {/* Burgundy glow */}
-          <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#9b0a28]/20 blur-3xl" />
-
-          <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
-
-            {/* Offer Content */}
-            <div className="max-w-2xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#9b0a28]/50 bg-[#9b0a28]/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#e5a0af]">
-                <FaTag className="text-[10px]" />
-                Early Offer
-              </div>
-
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#c6c6c6]">
-                Client Acquisition System
-              </p>
-
-              <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">
-                Turn Your Marketing Into a Client Acquisition Machine
-              </h2>
-
-              <p className="mt-3 max-w-xl text-sm leading-6 text-gray-300">
-                Get early access to the Client Acquisition System and take
-                your client acquisition training beyond the classroom.
-              </p>
-            </div>
-
-            {/* Price + CTA */}
-            <div className="shrink-0">
-              <div className="flex items-baseline gap-3">
-                <span className="text-sm text-gray-500 line-through">
-                  KES 5,000
-                </span>
-
-                <span className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                  KES 500
-                </span>
-              </div>
-
-            <Link
-  to="/client-acquisition-system"
-  className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] md:w-auto"
+       <motion.div
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="relative mx-auto mb-24 max-w-5xl overflow-hidden rounded-2xl border border-[#9b0a28]/40 bg-black/95 p-6 shadow-2xl shadow-[#9b0a28]/10 md:p-8"
 >
-  Get Early Access
-  <span className="ml-2">→</span>
-</Link>
-            </div>
+  {/* Burgundy glow */}
+  <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#9b0a28]/20 blur-3xl" />
 
-          </div>
-        </motion.div>
+  <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+
+    {/* Masterclass Content */}
+    <div className="max-w-2xl">
+
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#c6c6c6]">
+        Sensation Marketing Masterclass
+      </p>
+
+      <h2 className="mt-2 text-2xl font-bold tracking-tight text-white md:text-3xl">
+        Becoming An{" "}
+        <span className="text-[#9b0a28]">Influencer.</span>
+      </h2>
+
+      <p className="mt-3 max-w-xl text-sm leading-6 text-gray-300">
+        Learn how to become and market yourself as an influencer through
+        positioning, personal branding, monetisation and the right platforms.
+      </p>
+
+      {/* Topics */}
+      <div className="mt-5 flex flex-wrap gap-2">
+        {[
+          "Positioning",
+          "Personal Brand",
+          "Monetisation",
+          "Platforms",
+        ].map((topic) => (
+          <span
+            key={topic}
+            className="rounded-full border border-[#9b0a28]/50 px-3 py-1.5 text-xs font-medium text-[#c6c6c6] transition-colors duration-300 hover:border-[#9b0a28] hover:text-white"
+          >
+            {topic}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    {/* CTA */}
+    <div className="shrink-0">
+      <a
+        href="https://wa.me/254797983216?text=Hi%20Sensation%20Marketing%20Agency%2C%20I%27d%20like%20to%20book%20the%20Becoming%20An%20Influencer%20masterclass."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] md:w-auto"
+      >
+        WhatsApp to Book
+        <span className="ml-2">→</span>
+      </a>
+    </div>
+
+  </div>
+</motion.div>
 
         {/* Introduction */}
         <motion.div

@@ -325,62 +325,66 @@ const Home = () => {
           RIGHT — CLIENT ACQUISITION SYSTEM
       ================================================== */}
 
-      <div className="flex w-full justify-center lg:justify-end">
+      {/* ==================================================
+    RIGHT — FEATURED MASTERCLASS
+================================================== */}
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="relative w-full max-w-sm overflow-hidden rounded-2xl border border-[#9b0a28]/40 bg-black/65 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7"
-        >
+<div className="flex w-full justify-center lg:justify-end">
+  <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ delay: 0.6, duration: 0.6 }}
+    className="relative w-full max-w-sm overflow-hidden rounded-2xl border border-[#9b0a28]/40 bg-black/65 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-7"
+  >
+    {/* Accent Line */}
+    <div className="absolute left-0 top-0 h-1 w-full bg-[#9b0a28]" />
 
-          {/* Offer Badge */}
-          <div className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full border border-[#9b0a28]/50 bg-[#9b0a28]/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#e5a0af]">
-            <FaTag className="text-[10px]" />
-            Early Offer
-          </div>
+    {/* Label */}
+    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c6c6c6]">
+      Sensation Marketing Masterclass
+    </p>
 
+    {/* Title */}
+    <h3 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
+      Becoming An
+      <br />
+      <span className="text-[#9b0a28]">Influencer.</span>
+    </h3>
 
-          {/* Card Content */}
-          <div className="pt-1">
+    {/* Description */}
+    <p className="mt-4 text-sm leading-6 text-gray-300">
+      How to become and market yourself as an influencer.
+    </p>
 
-            <p className="max-w-[190px] text-xs font-semibold uppercase tracking-[0.18em] text-[#c6c6c6]">
-              Client Acquisition System
-            </p>
+    {/* Topics */}
+    <div className="mt-6 flex flex-wrap gap-2">
+      {["Positioning", "Personal Brand", "Monetisation", "Platforms"].map(
+        (topic) => (
+          <span
+            key={topic}
+            className="rounded-full border border-[#9b0a28]/50 px-3 py-1.5 text-xs font-medium text-[#c6c6c6] transition-colors duration-300 hover:border-[#9b0a28] hover:text-white"
+          >
+            {topic}
+          </span>
+        )
+      )}
+    </div>
 
+    {/* Divider */}
+    <div className="my-6 h-px w-full bg-white/10" />
 
-            {/* Price */}
-            <div className="mt-6 flex flex-wrap items-baseline gap-3">
-              <span className="text-sm text-gray-500 line-through">
-                KES 5,000
-              </span>
-
-              <span className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                KES 500
-              </span>
-            </div>
-
-
-            {/* Description */}
-            <p className="mt-3 max-w-xs text-sm leading-6 text-gray-300">
-              Get early access to the Client Acquisition System training.
-            </p>
-
-
-           {/* CTA */}
-<Link
-  to="/client-acquisition-system"
-  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] sm:w-auto"
->
-  Get Early Access
-  <span className="ml-2">→</span>
-</Link>
-
-          </div>
-
-        </motion.div>
-
-      </div>
+    {/* CTA */}
+    <a
+      href="https://wa.me/254797983216?text=Hi%20Sensation%20Marketing%20Agency%2C%20I%27d%20like%20to%20book%20the%20Becoming%20An%20Influencer%20masterclass."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30]"
+    >
+      WhatsApp to Book
+      <span className="ml-2">→</span>
+    </a>
+  </motion.div>
+</div>
 
     </div>
 
