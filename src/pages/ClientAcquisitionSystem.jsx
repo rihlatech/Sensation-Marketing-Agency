@@ -199,14 +199,14 @@ const ClientAcquisitionSystem = () => {
         Digital Marketing & Social Media Training
       </p>
 <h1 className="mt-7 font-['Playfair_Display'] text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl">
-  Become an
+  The client Acquisition 
   <span className="mt-1 block text-[#b7193d]">
-    Influencer Guide
+    System
   </span>
 </h1>
 
       <p className="mt-5 max-w-3xl text-base leading-7 text-gray-300 md:text-lg md:leading-8">
-        Everything we&apos;ve taught paying clients for{" "}
+        How to turn your Social Media into a client generating tool in 7 Steps. Everything we&apos;ve taught paying clients for{" "}
         <strong className="text-white">4+ years</strong>, packaged into one
         course — how to market a business, or launch one, using the exact
         system we run in-house. You don&apos;t need a huge following.{" "}
