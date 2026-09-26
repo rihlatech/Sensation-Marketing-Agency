@@ -10,7 +10,7 @@ import {
   FaLaptop,
   FaUsers,
   FaChartLine,
-  FaTag,
+  // FaTag,
 } from "react-icons/fa";
 
 const whatsapp = "254797983216";
@@ -169,8 +169,8 @@ const Training = () => {
           </p>
         </motion.div>
 
-                {/* Client Acquisition System Offer */}
-       <motion.div
+              {/* Client Acquisition System Offer */}
+<motion.div
   initial={{ opacity: 0, y: 25 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
@@ -182,7 +182,7 @@ const Training = () => {
 
   <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
 
-    {/* Masterclass Content */}
+    {/* Client Acquisition System Content */}
     <div className="max-w-2xl">
 
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#c6c6c6]">
@@ -190,13 +190,14 @@ const Training = () => {
       </p>
 
       <h2 className="mt-2 text-2xl font-bold tracking-tight text-white md:text-3xl">
-        Becoming An{" "}
-        <span className="text-[#9b0a28]">Influencer.</span>
+        The Client-Acquisition{" "}
+        <span className="text-[#9b0a28]">System.</span>
       </h2>
 
       <p className="mt-3 max-w-xl text-sm leading-6 text-gray-300">
-        Learn how to become and market yourself as an influencer through
-        positioning, personal branding, monetisation and the right platforms.
+        Learn how to attract, convert and retain clients using strategic
+        positioning, personal branding, digital marketing and the right
+        platforms.
       </p>
 
       {/* Topics */}
@@ -204,7 +205,9 @@ const Training = () => {
         {[
           "Positioning",
           "Personal Brand",
+          "Client Acquisition",
           "Monetisation",
+          "Digital Marketing",
           "Platforms",
         ].map((topic) => (
           <span
@@ -217,17 +220,25 @@ const Training = () => {
       </div>
     </div>
 
-    {/* CTA */}
+    {/* CTA & Offer */}
     <div className="shrink-0">
-      <a
-        href="https://wa.me/254797983216?text=Hi%20Sensation%20Marketing%20Agency%2C%20I%27d%20like%20to%20book%20the%20Becoming%20An%20Influencer%20masterclass."
-        target="_blank"
-        rel="noopener noreferrer"
+      <div className="mb-3 flex items-center justify-center gap-3 md:justify-start">
+        <span className="text-sm text-gray-500 line-through">
+          KES 5,000
+        </span>
+
+        <span className="text-xl font-bold text-white">
+          KES 500
+        </span>
+      </div>
+
+      <Link
+        to="/client-acquisition-system"
         className="inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30] md:w-auto"
       >
-        WhatsApp to Book
+        Get early access
         <span className="ml-2">→</span>
-      </a>
+      </Link>
     </div>
 
   </div>

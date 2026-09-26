@@ -15,7 +15,7 @@ import {
   FaLightbulb,
   FaHandshake,
   FaRocket,
-  FaTag,
+  // FaTag,
 } from "react-icons/fa";
 
 
@@ -346,14 +346,14 @@ const Home = () => {
 
     {/* Title */}
     <h3 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
-      Becoming An
+      The Client - Acquisition
       <br />
-      <span className="text-[#9b0a28]">Influencer.</span>
+      <span className="text-[#9b0a28]">System.</span>
     </h3>
 
     {/* Description */}
     <p className="mt-4 text-sm leading-6 text-gray-300">
-      How to become and market yourself as an influencer.
+      Digital Marketing and Social Media Training.
     </p>
 
     {/* Topics */}
@@ -373,16 +373,24 @@ const Home = () => {
     {/* Divider */}
     <div className="my-6 h-px w-full bg-white/10" />
 
-    {/* CTA */}
-    <a
-      href="https://wa.me/254797983216?text=Hi%20Sensation%20Marketing%20Agency%2C%20I%27d%20like%20to%20book%20the%20Becoming%20An%20Influencer%20masterclass."
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30]"
-    >
-      WhatsApp to Book
-      <span className="ml-2">→</span>
-    </a>
+    {/* Price */}
+<div className="mt-6 flex items-center gap-3">
+  <span className="text-sm text-gray-500 line-through">
+    KES 5,000
+  </span>
+
+  <span className="text-2xl font-bold text-white">
+    KES 500
+  </span>
+</div>
+
+{/* CTA */}
+<Link
+  to="/client-acquisition-system"
+  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#9b0a28] px-5 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#b30d30]"
+>
+  Get early access
+</Link>
   </motion.div>
 </div>
 
